@@ -2,3 +2,13 @@ E:\Asp.Net Core Web Api\SimpleCrud\Repository\bin\Debug\netcoreapp3.1\Model.dll
 E:\Asp.Net Core Web Api\SimpleCrud\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache
 E:\Asp.Net Core Web Api\SimpleCrud\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfoInputs.cache
 E:\Asp.Net Core Web Api\SimpleCrud\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfo.cs
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\bin\Debug\netcoreapp3.1\Repository.deps.json
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\bin\Debug\netcoreapp3.1\Repository.dll
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\bin\Debug\netcoreapp3.1\Repository.pdb
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\bin\Debug\netcoreapp3.1\Model.pdb
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInputs.cache
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\obj\Debug\netcoreapp3.1\Repository.dll
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\obj\Debug\netcoreapp3.1\Repository.pdb
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\bin\Debug\netcoreapp3.1\ViewModel.dll
+E:\Asp.Net Core Web Api\SimpleCrud\Repository\bin\Debug\netcoreapp3.1\ViewModel.pdb
