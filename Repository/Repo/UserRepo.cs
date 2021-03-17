@@ -23,18 +23,19 @@ namespace Repository.Repo
         {
             try
             {
-                var users = userEntity.AsEnumerable();
-                List<UserViewModel> userVM = users.Select(u => new UserViewModel
-                {
-                    Id = u.Id,
-                    Name = u.Name,
-                    Sex = u.Sex,
-                    Email = u.Email,
-                    Mobile = u.Mobile,
-                    Address = u.Address,
-                }).ToList();
+                return (from u in context.Users
+                        join g in context.Genders on u.GenderId equals g.Id
+                        select new UserViewModel
+                        {
+                            Id = u.Id,
+                            Name = u.Name,
+                            GenderId = g.Id,
+                            GenderName = g.Name,
+                            Email = u.Email,
+                            Mobile = u.Mobile,
+                            Address = u.Address,
+                        } ).AsEnumerable().ToList();
 
-                return userVM;
             }
             catch (Exception)
             {
@@ -48,19 +49,20 @@ namespace Repository.Repo
         {
             try
             {
-                var u = userEntity.AsNoTracking().FirstOrDefault(u => u.Id == id);
-                if (u == null)
-                    return null;
-                UserViewModel userVM = new UserViewModel
-                {
-                    Id = u.Id,
-                    Name = u.Name,
-                    Sex = u.Sex,
-                    Email = u.Email,
-                    Mobile = u.Mobile,
-                    Address = u.Address
-                };
-                return userVM;
+                return (from u in context.Users
+                        where u.Id == id
+                        join g in context.Genders on u.GenderId equals g.Id
+                        select new UserViewModel
+                        {
+                            Id = u.Id,
+                            Name = u.Name,
+                            GenderId = g.Id,
+                            GenderName = g.Name,
+                            Email = u.Email,
+                            Mobile = u.Mobile,
+                            Address = u.Address,
+                        }).AsNoTracking().SingleOrDefault();
+
             }
             catch (Exception ex)
             {
@@ -82,7 +84,7 @@ namespace Repository.Repo
                 User user = new User
                 {
                     Name = userVM.Name,
-                    Sex = userVM.Sex,
+                    GenderId = userVM.GenderId,
                     Email = userVM.Email,
                     Mobile = userVM.Mobile,
                     Address = userVM.Address,
@@ -110,7 +112,7 @@ namespace Repository.Repo
                 {
                     Id = userVM.Id,
                     Name = userVM.Name,
-                    Sex = userVM.Sex,
+                    GenderId = userVM.GenderId,
                     Email = userVM.Email,
                     Mobile = userVM.Mobile,
                     Address = userVM.Address,

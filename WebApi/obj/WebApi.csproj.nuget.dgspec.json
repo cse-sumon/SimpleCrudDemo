@@ -249,8 +249,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\Asp.Net Core Web Api\\SimpleCrud\\Model\\Model.csproj": {
+                "projectPath": "E:\\Asp.Net Core Web Api\\SimpleCrud\\Model\\Model.csproj"
+              },
               "E:\\Asp.Net Core Web Api\\SimpleCrud\\Repository\\Repository.csproj": {
                 "projectPath": "E:\\Asp.Net Core Web Api\\SimpleCrud\\Repository\\Repository.csproj"
+              },
+              "E:\\Asp.Net Core Web Api\\SimpleCrud\\ViewModel\\ViewModel.csproj": {
+                "projectPath": "E:\\Asp.Net Core Web Api\\SimpleCrud\\ViewModel\\ViewModel.csproj"
               }
             }
           }
@@ -265,6 +271,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
