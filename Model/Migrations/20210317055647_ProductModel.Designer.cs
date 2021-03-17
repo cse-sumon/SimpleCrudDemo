@@ -2,73 +2,23 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Model;
 
 namespace Model.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20210317055647_ProductModel")]
+    partial class ProductModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Model.Color", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Colors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "White"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Red"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Blue"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Green"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Black"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Yellow"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Magenta"
-                        });
-                });
 
             modelBuilder.Entity("Model.Gender", b =>
                 {
