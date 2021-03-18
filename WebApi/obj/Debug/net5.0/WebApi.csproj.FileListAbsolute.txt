@@ -65,3 +65,5 @@ E:\Asp.Net Core Web Api\SimpleCrud\WebApi\bin\Debug\net5.0\ViewModel.dll
 E:\Asp.Net Core Web Api\SimpleCrud\WebApi\bin\Debug\net5.0\ViewModel.pdb
 E:\Asp.Net Core Web Api\SimpleCrud\WebApi\bin\Debug\net5.0\Humanizer.dll
 E:\Asp.Net Core Web Api\SimpleCrud\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Asp.Net Core Web Api\SimpleCrud\WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+E:\Asp.Net Core Web Api\SimpleCrud\WebApi\bin\Debug\net5.0\System.IO.Pipelines.dll

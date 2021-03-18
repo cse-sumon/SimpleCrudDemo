@@ -41,6 +41,7 @@ namespace WebApi
 
             services.AddTransient<IUserRepo, UserRepo>();
             services.AddTransient<IColorRepo, ColorRepo>();
+            services.AddTransient<IProductRepo, ProductRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

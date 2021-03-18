@@ -17,6 +17,7 @@ namespace WebApi.Controllers
         {
             _colorRepo = colorRepo;
         }
+
         [HttpGet]
         public IActionResult GetAllColors()
         {

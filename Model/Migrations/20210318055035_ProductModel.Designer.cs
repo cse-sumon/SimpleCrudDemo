@@ -9,7 +9,7 @@ using Model;
 namespace Model.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210317055647_ProductModel")]
+    [Migration("20210318055035_ProductModel")]
     partial class ProductModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,6 +19,58 @@ namespace Model.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Model.Color", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Colors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "White"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Red"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Blue"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Green"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Black"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Yellow"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Magenta"
+                        });
+                });
 
             modelBuilder.Entity("Model.Gender", b =>
                 {
@@ -63,6 +115,9 @@ namespace Model.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")

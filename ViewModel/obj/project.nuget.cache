@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "sofCY8rD57B5z1dVn9cfMEH/zIT7dqtwtGwrc+dp6S21Cx2h0Vzme3Lvwp32mnx64UqsqpxsH94xf93wCZhoWQ==",
+  "dgSpecHash": "DJyp3zm4jHegIxXol2qSqc3gU3v2hSwQToYF1j+X96jAXoRzNI/5FbprO0tkd45TmgoiM/QWjRa+LzQKveQwrA==",
   "success": true,
   "projectFilePath": "E:\\Asp.Net Core Web Api\\SimpleCrud\\ViewModel\\ViewModel.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.4\\microsoft.aspnetcore.http.features.5.0.4.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

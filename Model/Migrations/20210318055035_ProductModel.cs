@@ -13,6 +13,7 @@ namespace Model.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     StatusId = table.Column<int>(type: "int", nullable: false),
@@ -23,40 +24,12 @@ namespace Model.Migrations
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
                 });
-
-            migrationBuilder.UpdateData(
-                table: "ProductStatuses",
-                keyColumn: "Id",
-                keyValue: 1,
-                column: "Name",
-                value: "Active");
-
-            migrationBuilder.UpdateData(
-                table: "ProductStatuses",
-                keyColumn: "Id",
-                keyValue: 2,
-                column: "Name",
-                value: "InActive");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Products");
-
-            migrationBuilder.UpdateData(
-                table: "ProductStatuses",
-                keyColumn: "Id",
-                keyValue: 1,
-                column: "Name",
-                value: "In Stock");
-
-            migrationBuilder.UpdateData(
-                table: "ProductStatuses",
-                keyColumn: "Id",
-                keyValue: 2,
-                column: "Name",
-                value: "Out of Stock");
         }
     }
 }
